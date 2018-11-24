@@ -1,0 +1,133 @@
+# NOTE: to run the lsqr code through the debugger, a lot of variables need to be defined.
+# Copy all the lines below into the window where you run the debugging before launching
+# gdb to setup these for the code.
+
+setenv DOLSQR 1
+setenv MAXITER 100
+setenv ITERPRINT 100
+setenv DELETE 1
+setenv MKUNWEIGHT 1
+setenv UNWEIGHTLIM 10
+setenv MKSYNTH 0
+setenv CORRECTDATA 0
+setenv RULLOUT3DCRUST 0 
+setenv MKHITCOUNT 0
+setenv GETMAXCOL 0
+setenv MKCOLSUM 1
+setenv MKNORMCOL 1
+setenv SYNTHFILE THETTA_ER_MEIRA_RUGLID
+setenv ADDNOISE 0
+setenv NFACTOR 0.2 
+setenv FINDNANS 0
+setenv PRINTMULOUT 0 
+setenv MULOUTFILE {$DATA}syndata0220/u_all.bin 
+setenv RULLOUT3DCRUST 0
+setenv FILEND EHB0607_MBAA 
+set i = 0
+set ii = `printf "%2.2d" $i`
+set inorm=$ii
+setenv MATPATH$ii "$SENSM"regridsmAFRICA/damp/norm/ 
+setenv SCALE$ii 50
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2006/P1tmp/ 
+setenv SCALE$ii 1
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2006/P2tmp/ 
+setenv SCALE$ii 1
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2006/Pup/ 
+setenv SCALE$ii 1
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2006/pP/ 
+setenv SCALE$ii 1
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2006/Pg/
+setenv SCALE$ii 1
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2006/PnDEEP/
+setenv SCALE$ii 1
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2007/P/
+setenv SCALE$ii 1
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2007/Pup/
+setenv SCALE$ii 1
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2007/pP/
+setenv SCALE$ii 1
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2007/Pg/
+setenv SCALE$ii 1
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2007/PnDEEP/
+setenv SCALE$ii 1
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2006/PKP/
+setenv SCALE$ii 3.14 
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2007/PKP/
+setenv SCALE$ii 3.14 
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2006/PKPcap/
+setenv SCALE$ii 1 
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsm2007/PKPcap/
+setenv SCALE$ii 1 
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsmAFRICA/P1tmp/ 
+setenv SCALE$ii 2
+setenv LASTREC $i
+@ i +=1
+set ii = `printf "%2.2d" $i`
+set ilat=$ii
+setenv MATPATH$ii "$SENSM"regridsmAFRICA/damppr/lat/ 
+setenv SCALE$ii 1500
+@ i +=1
+set ii = `printf "%2.2d" $i`
+set ilon=$ii
+setenv MATPATH$ii "$SENSM"regridsmAFRICA/damppr/lon/ 
+setenv SCALE$ii 1500
+@ i +=1
+set ii = `printf "%2.2d" $i`
+set idep=$ii
+setenv MATPATH$ii "$SENSM"regridsmAFRICA/damppr/dep/ 
+setenv SCALE$ii 1500 
+@ i +=1
+set ii = `printf "%2.2d" $i`
+setenv MATPATH$ii "$SENSM"regridsmAFRICA/damp/misloc/
+setenv SCALE$ii 0.01
+@ i +=1
+setenv MATNR $i
+setenv MODELDIR /Users/Sbordyak/models/smreg2000/
+setenv RAYGRIDDIR "$REGRID"gridsums/smcrust/

@@ -1,0 +1,1 @@
+gcc -g -o lsqr matwork.c lsqr.c main.c readdata.c vecop.c synth.c randnorm.c checkfile.c resolution.c multiply.c -lm

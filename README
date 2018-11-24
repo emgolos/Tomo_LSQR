@@ -1,0 +1,5 @@
+Some include statements had to be added to access the library functions correctly.
+But, more importantly, the code had to be compiled with the 64-bit option in gcc
+otherwise the code bombs when runs.  
+
+Samantha Hansen
